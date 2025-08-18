@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="todo-title">ToDo-List <i class="bx bx-edit"></i></h1>
+      <div class="input">
+        <input id="input" type="text" placeholder="Add your task..." />
+        <button onclick="add()" class="add-btn">ADD</button>
+      </div>
+      <ul>
+        <li>
+          <i class="bx bx-circle"></i>
+          <p>task</p>
+          <button class="delete">DELETE</button>
+        </li>
+        <li>
+          <i class="bx bx-circle"></i>
+          <p>task</p>
+          <button class="delete">DELETE</button>
+        </li>
+        <li>
+          <i class="bx bx-circle"></i>
+          <p>task</p>
+          <button class="delete">DELETE</button>
+        </li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
