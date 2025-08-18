@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "ubuntu", sans-serif;
+}
+nav {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 25px 70px;
+  box-shadow: 0 1px 50px rgba(0, 0, 0, 0.1);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.nav-logo p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.nav-logo img {
+  width: 50px;
+}
+nav .nav-list {
+  display: flex;
+  gap: 28px;
+}
+nav .nav-list li {
+  list-style: none;
+}
+nav .nav-list li a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+nav .nav-list li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #5e3bee;
+  transition: all 0.3s ease;
+}
+nav .nav-list li:hover a::after {
+  width: 100%;
+}
+.btn {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 7px;
+  color: #000;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #5e3bee;
+  color: #fff;
+}
+header {
+  scroll-margin-top: 80px;
+  height: 700px;
+  background-color: rgb(190, 210, 230);
+  display: flex;
+  align-items: center;
+  padding: 20px 70px;
+}
+header .header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+header .header-title .name {
+  font-size: 1.7rem;
+  margin-bottom: 35px;
+}
+header .header-title .name span {
+  color: #5e3bee;
+  font-weight: bold;
+}
+header .header-title h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+header .header-title h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #5e3bee;
+}
+header .header-title .describe {
+  width: 450px;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+}
+header .header-image img {
+  max-width: 500px;
+}
+.skills {
+  scroll-margin-top: 80px;
+  height: 400px;
+  padding: 25px 70px;
+}
+.skills .skills-title {
+  font-size: 1.7rem;
+  margin-top: 20px;
+  height: 50px;
+}
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.skills .skills-items {
+  width: 280px;
+  height: 280px;
+  background-color: rgb(190, 210, 230);
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 10px;
+  border-bottom: 5px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.skills .skills-items i {
+  width: 60px;
+  height: 60px;
+  font-size: 2.5rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.skills .skills-items h3 {
+  font-size: 1.3rem;
+}
+.skills .skills-items p {
+  font-size: 0.8rem;
+}
+.skills .skills-items:hover {
+  border-color: #5e3bee;
+}
+.about {
+  margin: auto;
+  padding: 0 70px;
+  display: flex;
+  flex-direction: row;
+  height: 750px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.about img {
+  width: 500px;
+  background-color: rgb(190, 210, 230);
+  border-radius: 10px;
+}
+.about .about-title {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+.about .about-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.portfolio {
+  padding: 0 70px;
+  scroll-margin-top: 80px;
+}
+.portfolio .portfolio-head {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.portfolio .portfolio-head h2 {
+  font-size: 2.5rem;
+}
+.portfolio .portfolio-head .btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.portfolio .portfolio-head .btn i {
+  font-size: 2rem;
+  color: red;
+}
+.portfolio .portfolio-head .btn:hover {
+  background-color: red;
+}
+.portfolio .portfolio-head .btn:hover i {
+  color: #fff;
+}
+.portfolio {
+  height: 600px;
+  background-color: rgb(190, 210, 230);
+}
+.portfolio .portfolio-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+.portfolio .portfolio-list .portfolio-items {
+  text-align: center;
+  padding: 25px 20px;
+  width: 400px;
+  height: 450px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.15);
+  border: 2px solid #fff;
+  transition: all 0.2s ease;
+}
+.portfolio .portfolio-list .portfolio-items:hover {
+  border-color: #5e3bee;
+}
+.portfolio .portfolio-list .portfolio-items div {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+.portfolio .portfolio-list .portfolio-items #image-1 {
+  background-image: url("assets/sc-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.portfolio .portfolio-list .portfolio-items #image-2 {
+  background-image: url("assets/sc-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.portfolio .portfolio-list .portfolio-items #image-3 {
+  background-image: url("assets/sc-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.portfolio .portfolio-list .portfolio-items h3 {
+  font-size: 1.7rem;
+}
+.portfolio .portfolio-list .portfolio-items a {
+  font-size: 1.2rem;
+  color: red;
+  transition: all 0.3s ease;
+}
+.portfolio .portfolio-list .portfolio-items a:hover {
+  color: rgb(180, 0, 0);
+}
+.feedback {
+  height: 400px;
+  padding: 0 70px;
+  scroll-margin-top: 80px;
+}
+.feedback h2 {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2rem;
+}
+.feedback .feedback-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin-top: 50px;
+  gap: 80px;
+}
+.feedback .feedback-list .feedback-items {
+  width: 350px;
+  border: 2px solid #ccc;
+  height: 250px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.feedback .feedback-list .feedback-items:hover {
+  border-color: #5e3bee;
+}
+.feedback .feedback-list .feedback-items .feedback-stars {
+  font-size: 1.3rem;
+  color: rgb(245, 208, 0);
+}
+.feedback .feedback-list .feedback-items .customers-info {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.feedback
+  .feedback-list
+  .feedback-items
+  .customers-info
+  .customers-name-company {
+  margin-left: 12px;
+}
+.feedback .feedback-list .feedback-items .customers-info .name {
+  font-size: 1.2rem;
+}
+.feedback .feedback-list .feedback-items .image-1 {
+  width: 44px;
+  height: 44px;
+  background-image: url("assets/us-1.jpg");
+  background-size: cover;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+}
+.feedback .feedback-list .feedback-items .image-2 {
+  width: 44px;
+  height: 44px;
+  background-image: url("assets/us-2.jpg");
+  background-size: cover;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+}
+.feedback .feedback-list .feedback-items .image-3 {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-image: url("assets/us-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+footer {
+  background-color: rgb(190, 210, 230);
+  padding: 0 70px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+footer .footer-up {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+footer .footer-up .footer-list ul {
+  display: flex;
+  gap: 30px;
+}
+footer .footer-up .footer-list ul li {
+  list-style: none;
+}
+
+footer .footer-up .footer-list ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+  font-size: 1.15rem;
+}
+footer .footer-up .footer-list ul li:hover a {
+  color: #5e3bee;
+}
+footer .footer-up .social {
+  height: 40px;
+  width: 150px;
+  font-size: 2rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .footer-up .social i {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #000;
+  font-size: 1.8rem;
+}
+footer .footer-up .social i:hover {
+  font-size: 2.2rem;
+}
+footer .footer-up .social #facebook:hover {
+  color: #1877f2;
+}
+footer .footer-up .social #instagram:hover {
+  color: #ee2a7b;
+}
+footer .footer-up .social #linkedin:hover {
+  color: #0077B5;
+}
+footer .footer-up .social #github:hover {
+  color: #000;
+}
+.footer-up::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+}
+footer .footer-down {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-down .footer-setting {
+  display: flex;
+  gap: 30px;
+}
+footer .footer-down .footer-setting a {
+  color: #5e3bee;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+footer .footer-down p {
+  font-size: 1.2rem;
+}
+footer .footer-down .footer-setting a:hover {
+  color: #321e80;
+}
+@media (width < 1160px) {
+  #nav-btn {
+    display: none;
+  }
+  nav {
+    padding: 25px 30px;
+  }
+  header {
+    padding: 0 30px;
+  }
+  .skills {
+    height: 700px;
+  }
+}
